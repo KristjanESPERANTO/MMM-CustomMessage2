@@ -110,7 +110,7 @@ The following properties can be configured:
 
 | Option                | Description
 |-----------------------|------------
-|`uniqueID`	|Necessary only if you plan to have multiple instances of this module in your config file<br>**Type:** any<br>**Default:** `""`
+|`uniqueID`	|*Optional*, but necessary if you plan to have multiple instances of this module in your config file.  Give each instance a unique `uniqueID` that you can pass in notifications (see below)<br>**Type:** anything<br>**Default:** `""`
 
 <table width="100%">
     <!-- why, markdown... -->
