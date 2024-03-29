@@ -2,10 +2,10 @@
 
 THIS README NEEDS TO BE UPDATE 
 
-The `MMM-Rest` module is a [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) addon.
-This module collects data via HTTP calls and displays it on your mirror in a table.
+The `MMM-CustomMessage2` module is a [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) addon module.
+This module .
 
-![Rest Displays](example1.png)
+![Example Screenshot](example1.png)
 
 ## Installation
 
@@ -24,8 +24,9 @@ cd ~/MagicMirror/modules/MMM-CustomMessage2 \
 && npm install
 ```
 
-## Using the module
+## Usage
 
+### Example Config
 To use this module, add it to the modules array in the `config/config.js` file:
 
 ````javascript
@@ -103,7 +104,7 @@ modules: [
 ]
 ````
 
-## Configuration options
+### Configuration options
 
 The following properties can be configured:
 
