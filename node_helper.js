@@ -1,5 +1,5 @@
 /* MagicMirror²
- * Module: MMM-Rest
+ * Module: MMM-CustomMessage2
  *
  * By Dirk Melchers 
  * MIT Licensed.
@@ -13,16 +13,16 @@ module.exports = NodeHelper.create({
     },
 
     socketNotificationReceived: function(notification, payload) {
-        if (notification === 'MMM_REST_REQUEST') {
+        if (notification === 'MMM_CUSTOMMESSAGE2_REQUEST') {
             var that = this;
             request({
                 url: payload.url,
                 method: 'GET'
             }, function(error, response, body) {
-                // console.log("MMM_REST response:");
+                // console.log("MMM_CustomMessage2 response:");
                 if (!error && response.statusCode == 200) {
                     // console.log("send notification: "+payload.id);
-                    that.sendSocketNotification('MMM_REST_RESPONSE', {
+                    that.sendSocketNotification('MMM_CUSTOMMESSAGE2_RESPONSE', {
                         id: payload.id,
                         data: response,
                         tableID: payload.tableID
