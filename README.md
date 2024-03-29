@@ -1,4 +1,6 @@
-# Module: MMM-Rest
+# Module: MMM-CustomMessage2
+
+THIS README NEEDS TO BE UPDATE 
 
 The `MMM-Rest` module is a [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) addon.
 This module collects data via HTTP calls and displays it on your mirror in a table.
