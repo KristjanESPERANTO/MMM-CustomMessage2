@@ -10,9 +10,9 @@ This module collects data via HTTP calls and displays it on your mirror in a tab
 ## Installation
 
 ```bash
-cd ~/MagicMirror/modules /
-&& git clone https://github.com/dathbe/MMM-CustomMessage2 /
-&& cd MMM-CustomMessage2 /
+cd ~/MagicMirror/modules \
+&& git clone https://github.com/dathbe/MMM-CustomMessage2 \
+&& cd MMM-CustomMessage2 \
 && npm install
 ```
 
