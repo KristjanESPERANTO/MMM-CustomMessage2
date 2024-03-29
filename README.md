@@ -9,9 +9,12 @@ This module collects data via HTTP calls and displays it on your mirror in a tab
 
 ## Installation
 
-1. Navigate into your MagicMirror's `modules` folder and execute `git clone https://github.com/Tuxdiver/MMM-Rest`
-2. cd `cd MMM-Rest`
-3. Execute `npm install` to install the node dependencies.
+```bash
+cd ~/MagicMirror/modules /
+&& git clone https://github.com/dathbe/MMM-CustomMessage2 /
+&& cd MMM-CustomMessage2 /
+&& npm install
+```
 
 ## Changelog
 
