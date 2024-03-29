@@ -27,9 +27,9 @@ cd ~/MagicMirror/modules/MMM-CustomMessage2 \
 ## Usage
 
 ### Example Config
-To use this module, add it to the modules array in the `config/config.js` file:
+To use this module, add it to the modules array in your `~/MagicMirror/config/config.js` file:
 
-````javascript
+````js
 modules: [
     {
         module: 'MMM-Rest',
@@ -107,7 +107,7 @@ modules: [
 ### Configuration options
 
 The following properties can be configured:
-
+`uniqueID`|Necessary only if you plan to have multiple instances of this module in your config file<br>Type: any<br>Default: `""`
 <table width="100%">
     <!-- why, markdown... -->
     <thead>
