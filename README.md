@@ -3,7 +3,7 @@
 The `MMM-Rest` module is a [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) addon.
 This module collects data via HTTP calls and displays it on your mirror in a table.
 
-![Rest Displays](screenshot.png)
+![Rest Displays](example1.png)
 
 ## Installation
 
