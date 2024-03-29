@@ -1,13 +1,13 @@
 /* global Module */
 
 /* MagicMirror²
- * Module: MMM-Rest
+ * Module: MMM-CustomMessage2
  *
- * By Dirk Melchers
+ * By dathbe
  * MIT Licensed.
  */
 
-Module.register("MMM-Rest",{
+Module.register("MMM-CustomMessage2",{
 
 	// Default module config.
 	defaults: {
@@ -29,7 +29,7 @@ Module.register("MMM-Rest",{
 	},
 	// Define required scripts.
 	getStyles: function() {
-		return ["MMM-Rest.css"];
+		return ["MMM-CustomMessage2.css"];
 	},
     
 	getScripts: function() {
@@ -67,7 +67,7 @@ Module.register("MMM-Rest",{
 	getDom: function() {
         var self = this;
 
-        this.debugmsg('MMM-Rest: getDom');
+        this.debugmsg('MMM-CustomMessage2: getDom');
         
         // create wrapper <div>
 		var wrapper = document.createElement("div");
@@ -81,7 +81,7 @@ Module.register("MMM-Rest",{
 
         // Loading message
 		if (!this.loaded) {
-			wrapper.innerHTML = "MMM-Rest Loading...";
+			wrapper.innerHTML = "MMM-CustomMessage2 Loading...";
 			wrapper.className = "dimmed light small";
 			return wrapper;
 		}
@@ -92,7 +92,7 @@ Module.register("MMM-Rest",{
         
         // loop over all output rows
         for (var row_id in self.config.output) {
-            this.debugmsg('MMM-Rest: getDom row='+row_id);
+            this.debugmsg('MMM-CustomMessage2: getDom row='+row_id);
             
             var row = self.config.output[row_id];
             
@@ -130,13 +130,13 @@ Module.register("MMM-Rest",{
                         } else if (format.constructor === Array) {
 
                             var result='';
-                            this.debugmsg("MMM-Rest: new format section found");
+                            this.debugmsg("MMM-CustomMessage2: new format section found");
 
                             for (var condition_id in format) {
                                 var condition=format[condition_id];
-                                this.debugmsg("MMM-Rest: check condition: ",condition);
+                                this.debugmsg("MMM-CustomMessage2: check condition: ",condition);
                                 if (typeof condition['range'] != 'undefined') {
-                                    this.debugmsg("MMM-Rest: range defined: ",condition['range']);
+                                    this.debugmsg("MMM-CustomMessage2: range defined: ",condition['range']);
                                     var min=condition['range'][0];
                                     var max=condition['range'][1];
                                     var match = false;
@@ -156,7 +156,7 @@ Module.register("MMM-Rest",{
                                             match = false;
                                         }
                                     }
-                                    this.debugmsg("MMM-Rest: match is: "+match);
+                                    this.debugmsg("MMM-CustomMessage2: match is: "+match);
                                     if (match) {
                                         result = condition['format'];
                                         if (condition['transform']) {
@@ -183,7 +183,7 @@ Module.register("MMM-Rest",{
                                 }
                             }
 
-                            this.debugmsg("MMM-Rest: final format is: "+result);
+                            this.debugmsg("MMM-CustomMessage2: final format is: "+result);
                             format = result;
                         }
                         
@@ -230,15 +230,15 @@ Module.register("MMM-Rest",{
 	getData: function() {
 
         var self = this;
-        this.debugmsg('MMM-Rest: getData');
+        this.debugmsg('MMM-CustomMessage2: getData');
         
         // loop over all sections
         for (var id in self.sections) {
             var section = self.sections[id];
-            this.debugmsg('MMM-Rest: getData section id: '+id);
+            this.debugmsg('MMM-CustomMessage2: getData section id: '+id);
 
             this.sendSocketNotification(
-                'MMM_REST_REQUEST',
+                'MMM_CUSTOMMESSAGE2_REQUEST',
                 {
                     id: id,
                     url: section.url,
@@ -255,7 +255,7 @@ Module.register("MMM-Rest",{
         // store the data in the sectionData array       
         this.sectionData[id] = data;
         
-        this.debugmsg('MMM-Rest: Process result section: ' + id);
+        this.debugmsg('MMM-CustomMessage2: Process result section: ' + id);
         
 		this.loaded = true;
 		this.debugVar = "";
@@ -264,7 +264,7 @@ Module.register("MMM-Rest",{
 	},
     
     socketNotificationReceived: function(notification, payload) {
-        if (notification === 'MMM_REST_RESPONSE' && payload.tableID == JSON.stringify(this.config.sections) ) {
+        if (notification === 'MMM_CUSTOMMESSAGE2_RESPONSE' && payload.tableID == JSON.stringify(this.config.sections) ) {
             this.debugmsg('received:' + notification);
             if(payload.data && payload.data.statusCode === 200){
                 this.debugmsg("process result:"+payload.id+" data:"+payload.data.body);
