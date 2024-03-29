@@ -107,7 +107,11 @@ modules: [
 ### Configuration options
 
 The following properties can be configured:
-`uniqueID`|Necessary only if you plan to have multiple instances of this module in your config file<br>Type: any<br>Default: `""`
+
+| Option                | Description
+|-----------------------|------------
+|`uniqueID`	|Necessary only if you plan to have multiple instances of this module in your config file<br>**Type:** any<br>**Default:** `""`
+
 <table width="100%">
     <!-- why, markdown... -->
     <thead>
