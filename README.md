@@ -16,13 +16,13 @@ cd ~/MagicMirror/modules \
 && npm install
 ```
 
-## Changelog
+## Updating
 
-- 2016-10-27: incompatible changes: the "suffix" and "digits" parameters are removed and replaced by a "format" parameter! Please check your config!
-- 2018-02-02: added ranges to format parameter
-- 2024-03-21: added the ability to place multiple instances of the module into config files
-- 2024-03-22: Added the ability to specify and customize display of DateTime objects
-- 2024-03-22: Added the ability to transform REST results before displaying
+```sh
+cd ~/MagicMirror/modules/MMM-CustomMessage2 \
+&& git pull \
+&& npm install
+```
 
 ## Using the module
 
@@ -208,3 +208,8 @@ The following properties can be configured:
         </tr>
     </tbody>
 </table>
+
+
+## Changelog
+
+- 2024-XX-XX: Initial release
