@@ -1,13 +1,13 @@
 {
-  "name": "mmm-rest",
+  "name": "mmm-custommessage2",
   "version": "1.0.0",
-  "description": "A module for MagicMirror² to show values from a url.",
-  "main": "MMM-Rest.js",
-  "author": "Dirk Melchers",
+  "description": "A MagicMirror² module to show a custom message.",
+  "main": "MMM-CustomMessage2.js",
+  "author": "dathbe",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tuxdiver/MMM-Rest.git"
+    "url": "git+https://github.com/dathbe/MMM-CustomMessage2.git"
   },
   "dependencies": {
     "sprintf-js": "",
@@ -15,7 +15,9 @@
   },
   "keywords": [
     "MagicMirror",
-    "rest",
-    "API"
+    "MagicMirror²",
+    "Custom",
+    "Text",
+    "Message"
   ]
 }
