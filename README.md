@@ -1,5 +1,6 @@
 # Module: MMM-CustomMessage2
 
+THIS MODULE IS A WORK IN PROGRESS
 THIS README NEEDS TO BE UPDATED 
 
 The `MMM-CustomMessage2` module is a [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) addon module.
