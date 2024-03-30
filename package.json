@@ -1,7 +1,7 @@
 {
   "name": "mmm-custommessage2",
   "version": "1.0.0",
-  "description": "A MagicMirror² module to show a custom message.",
+  "description": "A MagicMirror² module to show a custom message with styling.  Updateable via notification.",
   "main": "MMM-CustomMessage2.js",
   "author": "dathbe",
   "license": "CC-BY-NC-SA",
