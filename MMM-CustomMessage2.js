@@ -12,7 +12,7 @@ Module.register("MMM-CustomMessage2",{
 	// Default config.
 	defaults: {
 		animationSpeed: 2 * 1000,
-		uniqueID: false,
+		uniqueID: null,
 		initialMessage: "No notification received yet"
 	},
 	// Define required scripts.
