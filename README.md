@@ -54,7 +54,28 @@ The following properties can be configured:
 
 ### Posting a message via notification
 
+You can update the message displayed by this module using a `CUSTOMMESSAGE2_UPDATE` notification.  Pass the `message` and, if you have more than one instance of the module, the `uniqueID` of the instance in a json object:
 
+```json
+{
+	"uniqueID": "myUniqueID",
+	"message": "I posted a notification message!"
+}
+```
+
+For example, if you wanted to create such a notification in python:
+
+``py
+import requests 
+
+accesstoken = 'mYsUpErSeCrEtToKeN'
+header = {'Authorization': f"Bearer {accesstoken}", 'Content-type': 'application/json'}
+message = 
+json = {
+	"uniqueID": "earthquakes",
+	"message": "<div style='width:100%; background-color:#f19b52; border-radius: 7px; margin-bottom: 10px; padding: 10px;'>I posted a notification message!</div>"
+}
+```
 
 ### Notes
 
