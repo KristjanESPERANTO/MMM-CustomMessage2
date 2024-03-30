@@ -14,16 +14,15 @@ Suggestions are welcome.
 ```bash
 cd ~/MagicMirror/modules \
 && git clone https://github.com/dathbe/MMM-CustomMessage2 \
-&& cd MMM-CustomMessage2 \
-&& npm install
 ```
+
+No dependencies need to be installed.
 
 ## Updating
 
 ```sh
 cd ~/MagicMirror/modules/MMM-CustomMessage2 \
-&& git pull \
-&& npm install
+&& git pull
 ```
 
 ## Usage
