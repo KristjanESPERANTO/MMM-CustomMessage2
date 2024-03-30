@@ -12,7 +12,7 @@ Module.register("MMM-CustomMessage2",{
 	// Default config.
 	defaults: {
 		animationSpeed: 2 * 1000,
-		uniqueID: "",
+		uniqueID: false,
 		initialMessage: "No notification received yet"
 	},
 	// Define required scripts.
@@ -52,7 +52,7 @@ Module.register("MMM-CustomMessage2",{
 	},
 
 	notificationReceived: function(notification, payload, sender) {
-        if(notification === 'CUSTOMMESSAGE2_UPDATE' && (payload.uniqueID == this.config.uniqueID || this.config.uniqueID == "")) {
+        if(notification === 'CUSTOMMESSAGE2_UPDATE' && (payload.uniqueID == this.config.uniqueID || !this.config.uniqueID)) {
 			this.processNewMessage(payload.message);
         }
     },
