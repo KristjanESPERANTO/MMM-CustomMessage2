@@ -63,7 +63,7 @@ You can update the message displayed by this module using a `CUSTOMMESSAGE2_UPDA
 }
 ```
 
-For example, if you wanted to create such a notification in python:
+For example, if you wanted to create such a notification in python, install the [MMM-Remote-Control](https://github.com/Jopyth/MMM-Remote-Control) module, and then you can execute the following script:
 
 ```py
 import requests 
