@@ -4,7 +4,7 @@
   "description": "A MagicMirror² module to show a custom message.",
   "main": "MMM-CustomMessage2.js",
   "author": "dathbe",
-  "license": "MIT",
+  "license": "CC-BY-NC-SA",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dathbe/MMM-CustomMessage2.git"
