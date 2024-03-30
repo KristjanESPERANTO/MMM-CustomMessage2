@@ -1,17 +1,14 @@
 {
   "name": "mmm-custommessage2",
   "version": "1.0.0",
-  "description": "A MagicMirror² module to show a custom message with styling.  Updateable via notification.",
+  "description": "A MagicMirror² module to show a custom message.",
   "main": "MMM-CustomMessage2.js",
   "author": "dathbe",
-  "license": "CC-BY-NC-SA",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dathbe/MMM-CustomMessage2.git"
   },
-  "dependencies": {
-    "sprintf-js": "",
-    "request": ""
   },
   "keywords": [
     "MagicMirror",
