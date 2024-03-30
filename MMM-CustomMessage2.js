@@ -4,7 +4,7 @@
  * Module: MMM-CustomMessage2
  *
  * By dathbe
- * MIT Licensed.
+ * CC Licensed.
  */
 
 Module.register("MMM-CustomMessage2", {
@@ -12,7 +12,7 @@ Module.register("MMM-CustomMessage2", {
 	// Default config.
 	defaults: {
 		animationSpeed: 2 * 1000,
-		uniqueID: "",
+		uniqueID: null,
 		initialMessage: "No notification received yet"
 	},
 	// Define required scripts.
@@ -52,7 +52,7 @@ Module.register("MMM-CustomMessage2", {
 	},
 
 	notificationReceived (notification, payload, sender) {
-		if (notification === "CUSTOMMESSAGE2_UPDATE" && payload.uniqueID === this.config.uniqueID) {
+		if(notification === 'CUSTOMMESSAGE2_UPDATE' && (payload.uniqueID == this.config.uniqueID || !this.config.uniqueID)) {
 			Log.debug(`Received notification: ${notification} with payload.message: ${payload.message} from sender: ${sender}`);
 			this.processNewMessage(payload.message);
 		}
