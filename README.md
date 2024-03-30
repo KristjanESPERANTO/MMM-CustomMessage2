@@ -73,7 +73,7 @@ header = {'Authorization': f"Bearer {accesstoken}", 'Content-type': 'application
 message = 
 json = {
 	"uniqueID": "myUniqueID",
-	"message": "<div style='width:100%; background-color:#f19b52; border-radius: 7px; margin-bottom: 10px; padding: 10px;'>I posted a notification message!</div>"
+	"message": "<div style='background-color:#f19b52'>I posted a notification message!</div>"
 }
 x = requests.post('http://localhost:8080/api/notification/CUSTOMMESSAGE2_UPDATE', json=json, headers=header)
 ```
