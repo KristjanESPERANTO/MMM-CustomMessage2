@@ -1,4 +1,4 @@
-/* global Module */
+/* global Log, Module */
 
 /* MagicMirror²
  * Module: MMM-CustomMessage2
@@ -7,7 +7,7 @@
  * MIT Licensed.
  */
 
-Module.register("MMM-CustomMessage2",{
+Module.register("MMM-CustomMessage2", {
 
 	// Default config.
 	defaults: {
@@ -16,23 +16,23 @@ Module.register("MMM-CustomMessage2",{
 		initialMessage: "No notification received yet"
 	},
 	// Define required scripts.
-	getStyles: function() {
+	getStyles () {
 		return ["MMM-CustomMessage2.css"];
 	},
-    
+
 	// Define start sequence.
-	start: function() {        
+	start () {
 		this.loaded = false;
 		this.initialUpdate();
 	},
 
 	// Override dom generator.
-	getDom: function() {
-        var self = this;
-        // create wrapper
-		var wrapper = document.createElement("div");
+	getDom () {
+		const self = this;
+		// create wrapper
+		const wrapper = document.createElement("div");
 
-        // Loading message
+		// Loading message
 		if (!this.loaded) {
 			wrapper.innerHTML = "MMM-CustomMessage2 Loading...";
 			wrapper.className = "dimmed light small";
@@ -40,27 +40,28 @@ Module.register("MMM-CustomMessage2",{
 		}
 
 		// Actual message
-        wrapper.innerHTML = self.messageText;
-        
+		wrapper.innerHTML = self.messageText;
+
 		return wrapper;
 	},
 
-    processNewMessage: function(data) {  
-        this.messageText = data;
-        this.loaded = true;
+	processNewMessage (data) {
+		this.messageText = data;
+		this.loaded = true;
 		this.updateDom(this.config.animationSpeed);
 	},
 
-	notificationReceived: function(notification, payload, sender) {
-        if(notification === 'CUSTOMMESSAGE2_UPDATE' && payload.uniqueID == this.config.uniqueID) {
+	notificationReceived (notification, payload, sender) {
+		if (notification === "CUSTOMMESSAGE2_UPDATE" && payload.uniqueID === this.config.uniqueID) {
+			Log.debug(`Received notification: ${notification} with payload.message: ${payload.message} from sender: ${sender}`);
 			this.processNewMessage(payload.message);
-        }
-    },
+		}
+	},
 
-	initialUpdate: function() {
-		var self = this;
-		setTimeout(function() {
+	initialUpdate () {
+		const self = this;
+		setTimeout(() => {
 			self.processNewMessage(self.config.initialMessage);
 		}, 0);
-	},
+	}
 });
