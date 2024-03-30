@@ -36,7 +36,7 @@ module: 'MMM-CustomMessage2',
 	config: {
 		initialMessage: "I posted my first message!",
 		uniqueID: "firstMessage",
-		animationSpeed: 1000 * 2
+		animationSpeed: 1000 * 2,
 	},
 }
 ````
