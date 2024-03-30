@@ -4,7 +4,7 @@
  * Module: MMM-CustomMessage2
  *
  * By dathbe
- * MIT Licensed.
+ * CC Licensed.
  */
 
 Module.register("MMM-CustomMessage2",{
@@ -52,7 +52,7 @@ Module.register("MMM-CustomMessage2",{
 	},
 
 	notificationReceived: function(notification, payload, sender) {
-        if(notification === 'CUSTOMMESSAGE2_UPDATE' && payload.uniqueID == this.config.uniqueID) {
+        if(notification === 'CUSTOMMESSAGE2_UPDATE' && (payload.uniqueID == this.config.uniqueID || this.config.uniqueID == "")) {
 			this.processNewMessage(payload.message);
         }
     },
