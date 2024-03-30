@@ -32,7 +32,7 @@ To use this module, add it to the modules array in your `~/MagicMirror/config/co
 
 ````js
 {
-module: 'MMM-CustomMessage2',
+	module: 'MMM-CustomMessage2',
 	position: 'top_bar',
 	config: {
 		initialMessage: "I posted my first message!",
