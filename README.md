@@ -48,8 +48,8 @@ The following properties can be configured:
 
 | Option                | Description
 |-----------------------|------------
-|`initialMessage`	|*Optional* A message you would like to display when MagicMirror loads<br>**Type:** `string`<br>**Default:** `"No notification received yet"`
-|`uniqueID`	|*Optional*, but necessary if you plan to have multiple instances of this module in your config file.  Give each instance a unique `uniqueID` that you can pass in notifications (see below)<br>**Type:** anything<br>**Default:** `""`
+|`initialMessage`	|*Optional* A message you would like to display when MagicMirror loads<br>**Type:** `string` (accepts HTML elements)<br>**Default:** `"No notification received yet"`
+|`uniqueID`		|*Optional*, but necessary if you plan to have multiple instances of this module in your config file.  Give each instance a unique `uniqueID` that you can pass in notifications (see below)<br>**Type:** anything<br>**Default:** `""`
 |`animationSpeed`	|*Optional* The speed of animated transitions from one message to another in milliseconds<br>**Type:** `int`<br>**Default:** `2000` (2 seconds)
 
 ## Changelog
