@@ -3,7 +3,7 @@
 THIS MODULE IS A WORK IN PROGRESS
 THIS README NEEDS TO BE UPDATED 
 
-The `MMM-CustomMessage2` module is a [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) addon module.  It posts any message you want to your MagicMirror.  Multiple instances are supported.  Message can be updated via notification.
+`MMM-CustomMessage2` is a module for [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror). It posts any message you want to your MagicMirror.  Multiple instances are supported. Message can be updated via notification.
 
 ![Example Screenshot](screenshot.png)
 
@@ -12,8 +12,8 @@ Suggestions are welcome.
 ## Installation
 
 ```bash
-cd ~/MagicMirror/modules \
-&& git clone https://github.com/dathbe/MMM-CustomMessage2
+cd ~/MagicMirror/modules
+git clone https://github.com/dathbe/MMM-CustomMessage2
 ```
 
 No dependencies need to be installed, **but** you likely want [MMM-Remote-Control](https://github.com/Jopyth/MMM-Remote-Control) installed to allow posting of messages via API.
@@ -21,13 +21,14 @@ No dependencies need to be installed, **but** you likely want [MMM-Remote-Contro
 ## Updating
 
 ```sh
-cd ~/MagicMirror/modules/MMM-CustomMessage2 \
-&& git pull
+cd ~/MagicMirror/modules/MMM-CustomMessage2
+git pull
 ```
 
 ## Usage
 
 ### Example Config
+
 To use this module, add it to the modules array in your `~/MagicMirror/config/config.js` file:
 
 ````js
