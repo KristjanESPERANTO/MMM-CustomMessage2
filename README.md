@@ -65,7 +65,7 @@ You can update the message displayed by this module using a `CUSTOMMESSAGE2_UPDA
 
 For example, if you wanted to create such a notification in python:
 
-``py
+```py
 import requests 
 
 accesstoken = 'mYsUpErSeCrEtToKeN'
