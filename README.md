@@ -3,8 +3,7 @@
 THIS MODULE IS A WORK IN PROGRESS
 THIS README NEEDS TO BE UPDATED 
 
-The `MMM-CustomMessage2` module is a [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) addon module.
-This module .
+The `MMM-CustomMessage2` module is a [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) addon module.  It posts any message you want to your MagicMirror.  Multiple instances are supported.  Message can be updated via notification.
 
 ![Example Screenshot](example1.png)
 
